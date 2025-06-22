@@ -28,8 +28,8 @@ A simple web application that fetches real-time weather data for any city using 
 
 ## 📷 Demo
 
-![Weather web-app Preview](web_img.jpg)
-![Weather web-app Preview](web_img2.jpg)
+![Weather web-app Preview](web_img.png)
+![Weather web-app Preview](web_img2.png)
 
 ---
 
