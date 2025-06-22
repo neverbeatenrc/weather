@@ -1,0 +1,47 @@
+{
+    "location": {
+        "name": "Dubai",
+        "region": "Dubai",
+        "country": "United Arab Emirates",
+        "lat": 25.2522,
+        "lon": 55.28,
+        "tz_id": "Asia/Dubai",
+        "localtime_epoch": 1750615207,
+        "localtime": "2025-06-22 22:00"
+    },
+    "current": {
+        "last_updated_epoch": 1750614300,
+        "last_updated": "2025-06-22 21:45",
+        "temp_c": 34.3,
+        "temp_f": 93.7,
+        "is_day": 0,
+        "condition": {
+            "text": "Clear",
+            "icon": "//cdn.weatherapi.com/weather/64x64/night/113.png",
+            "code": 1000
+        },
+        "wind_mph": 8.5,
+        "wind_kph": 13.7,
+        "wind_degree": 249,
+        "wind_dir": "WSW",
+        "pressure_mb": 997.0,
+        "pressure_in": 29.44,
+        "precip_mm": 0.0,
+        "precip_in": 0.0,
+        "humidity": 60,
+        "cloud": 0,
+        "feelslike_c": 48.3,
+        "feelslike_f": 118.9,
+        "windchill_c": 31.1,
+        "windchill_f": 88.1,
+        "heatindex_c": 38.5,
+        "heatindex_f": 101.2,
+        "dewpoint_c": 25.6,
+        "dewpoint_f": 78.2,
+        "vis_km": 10.0,
+        "vis_miles": 6.0,
+        "uv": 0.0,
+        "gust_mph": 15.3,
+        "gust_kph": 24.6
+    }
+}
