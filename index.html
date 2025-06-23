@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: linear-gradient(to right, #83a4d4, #b6fbff);
+            color: #333;
+        }
+        #weather-container {
+            margin-top: 20px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<center>
+<h2>🌤️ Weather App</h2>
+<input type="text" id="cityInput" placeholder="Enter city name">
+<button onclick="getWeather()">Search</button>
+
+<div id="weather-container"></div>
+
+<script>
+    async function getWeather() {
+        const city = document.getElementById("cityInput").value;
+        const response = await fetch("http://127.0.0.1:5000/weather", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ city: city })
+        });
+
+        const result = await response.json();
+        const container = document.getElementById("weather-container");
+
+        if (result.status === "success") {
+            const data = result.data;
+            container.innerHTML = `
+                <h1><img src="${data.current.condition.icon}" alt="icon"> ${data.location.name}, ${data.location.country}</h1>
+                <p>Temperature: ${data.current.temp_c} °C</p>
+                <p>Condition: ${data.current.condition.text}</p>
+                <p>Wind Speed: ${data.current.wind_kph}</p>
+            `;
+        } else {
+            container.innerHTML = `<p style="color:red;">Error: ${result.message}</p>`;
+        }
+    }
+</script>
+</center>
+</body>
+</html>
